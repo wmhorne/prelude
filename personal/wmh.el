@@ -112,7 +112,7 @@
 :END:")
           ("h" "Home Item" entry
            (file "Home.org")
-           "* %^{prompt|DO|DO|BUY} %^{prompt} %^g 
+           "* %^{prompt|DO|DO|BUY} %^{prompt} %^g
 SCHEDULED: %^t" :immediate-finish t)
           	 ("p" "Protocol" entry
 	  (file "~/Dropbox/org/Inbox.org")
@@ -129,7 +129,7 @@ Source: %u, %c
 %?")
 	 ("L" "Protocol Link" entry
 	  (file "~/Dropbox/org/Inbox.org")
-	  "* %? [[%:link][%:description]] 
+	  "* %? [[%:link][%:description]]
 :PROPERTIES:
 :CREATED: %t
 :END:")
@@ -139,7 +139,7 @@ Source: %u, %c
           ("s" "Scholastica")
           ("sm" "Scholastica markdown" entry
            (file "~/Dropbox/org/Scholastica.org")
-           "* 
+           "*
 #+BEGIN_SRC markdown
 %?
 #+END_SRC")
@@ -470,4 +470,7 @@ file which do not already have one."
 (global-set-key [f7] 'helm-org-rifle)
 (global-set-key [f8] 'org-web-tools-insert-link-for-url)
 
-
+(use-package dired-sidebar
+  :bind (("C-x C-n" . dired-sidebar-toggle-sidebar))
+  :ensure t
+  :commands (dired-sidebar-toggle-sidebar))
